@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
-import BaseLayout from './components/BaseLayout'
-import App from './components/App';
+import BaseLayout from './components/BaseLayout';
+import Price from './components/Price';
+import Home from './components/Home';
+import Pedals from './components/Pedals';
 import registerServiceWorker from './registerServiceWorker';
 import {BrowserRouter, Route,Switch} from 'react-router-dom';
 
@@ -10,7 +12,9 @@ ReactDOM.render(
   <BrowserRouter>
   <BaseLayout>
   <Switch>
-  <Route path ='/' component = {App} />
+  <Route path = '/pedals' component = {Pedals}/>
+  <Route Path = '/price' component = {Price}/>
+  <Route path = '/' component = {Home}/>
   </Switch>
   </BaseLayout>
   </BrowserRouter>
