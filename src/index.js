@@ -13,7 +13,7 @@ ReactDOM.render(
   <BaseLayout>
   <Switch>
   <Route path = '/pedals' component = {Pedals}/>
-  <Route Path = '/price' component = {Price}/>
+  <Route path = '/price' component = {Price}/>
   <Route path = '/' component = {Home}/>
   </Switch>
   </BaseLayout>
