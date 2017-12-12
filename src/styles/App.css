@@ -1,7 +1,23 @@
 .home_box {
   text-align: center;
 }
-
+.home_content{
+  border: 1px solid red;
+  width: 100vw;
+  height: 54vw;
+}
+.header{
+  border: 1px solid red;
+  width: 100vw;
+  height: 10vw;
+}
+.home_image{
+  width: 100vw;
+  height: 45vw;
+  background-image: url('../images/pedalbackground.jpg');
+  background-size: cover;
+  background-position:  -20px;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
