@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {NavLink} from 'react-router-dom';
 import Adsense from 'react-adsense';
 export default class BaseLayout extends Component{
 constructor(props){
@@ -8,8 +9,9 @@ constructor(props){
     return(
       <div className='base_layout'>
         <div className = 'header'>
-          <div className = 'header1'>
-          </div>
+          <NavLink style={{textDecoration: 'none'}} to = '/'><div className = 'header1'>
+            <h1 style={{color: 'white'}}> What Is Your Pedal Worth? </h1>
+          </div></NavLink>
               <div className = 'header2'>
               </div>
                   <div className = 'header3'>

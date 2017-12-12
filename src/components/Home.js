@@ -9,9 +9,9 @@ export default class Home extends Component {
     return (
       <div className = 'home_box'>
         <div className = 'home_content'>
-        
-          <div className = 'home_image'>
-          </div>
+
+          <NavLink to = '/pedals'> <div className = 'home_image'>
+          </div></NavLink>
         </div>
       </div>
     );
