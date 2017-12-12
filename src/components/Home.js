@@ -9,10 +9,7 @@ export default class Home extends Component {
     return (
       <div className = 'home_box'>
         <div className = 'home_content'>
-          <div className = 'header'>
-
-            <h2> What is your pedal worth? </h2>
-          </div>
+        
           <div className = 'home_image'>
           </div>
         </div>
