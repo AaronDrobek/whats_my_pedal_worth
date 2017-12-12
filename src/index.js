@@ -5,6 +5,7 @@ import BaseLayout from './components/BaseLayout';
 import Price from './components/Price';
 import Home from './components/Home';
 import Pedals from './components/Pedals';
+import GoogleAdsense from './components/GoogleAdsense';
 import registerServiceWorker from './registerServiceWorker';
 import {BrowserRouter, Route,Switch} from 'react-router-dom';
 
