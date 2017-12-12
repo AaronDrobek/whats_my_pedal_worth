@@ -10,18 +10,20 @@ export default class Pedals extends Component{
   render(){
     console.log(products, 'this is products list');
 
-    let listProducts = products.map((product)=>{
+    let listProducts = products.map((product, i)=>{
       console.log(product.Brand, 'this is Brand Name*************');
       return(
-        <div className = 'each_pedal'>
-          <h3>{product.productName}</h3>
+        <div className = 'each_pedal' key={i}>
+          <h3 style={{textAlign: 'center'}}>{product.Brand}</h3>
         </div>
       )
     })
     return(
       <div className='pedals_box' >
         <div className = 'pedals_box_content'>
-        <h1> This is the pedals page </h1>
+
+          {listProducts}
+
         </div>
       </div>
     )
