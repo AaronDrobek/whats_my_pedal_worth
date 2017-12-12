@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Adsense from 'react-adsense';
 import './styles/index.css';
 import BaseLayout from './components/BaseLayout';
 import Price from './components/Price';
