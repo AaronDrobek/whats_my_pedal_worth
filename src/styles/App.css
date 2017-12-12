@@ -81,9 +81,11 @@
   height: 10vw;
 }
 .search_box{
+  margin-top: .5vw;
+  margin-left: 1vw;
   font-size: 14pt;
   text-align: center;
-  width: 100vw;
+  width: 95vw;
   height: 2vw;
 }
 productName
