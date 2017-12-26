@@ -29,7 +29,9 @@ export default class Pedals extends Component{
     let listProducts;
     if (filterPedals.length > 1){
     listProducts = filterPedals.map((product, i)=>{
-      // console.log(product.Brand, 'this is Brand Name*************');
+      // console.log(product.Brand, 'this is Brand Name*************')
+      // console.log(product.productNAME, 'this is product Name@@@@@@@@@@');
+      console.log(product.highPrice, 'this is high price');
 
       return(
         <div className = 'each_pedal' key={i}>
@@ -46,7 +48,7 @@ export default class Pedals extends Component{
         <div className = 'no_results'>
           <h3> Sorry No Results</h3>
         </div>
-      
+
       }
 
 
