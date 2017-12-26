@@ -19,8 +19,13 @@ export default class Pedals extends Component{
 }
 
   render(){
+    let noResults = 'Sorry No Results';
     let filterPedals = products.filter((product) =>{
-      return product.Brand.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+      if(product !== []){
+        return product.Brand.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+    }else{
+      return noResults
+    }
     })
     console.log(products, 'this is products list');
 
@@ -38,7 +43,7 @@ export default class Pedals extends Component{
           <input className = 'search_box' onChange={this.updateSearch} value={this.state.search} placeholder = 'search by brand, model number, or pedal name' />
 
           {listProducts}
-
+          {noResults}
         </div>
       </div>
     )
