@@ -108,7 +108,11 @@ productName
 .App-intro {
   font-size: large;
 }
-
+.no_results{
+  text-align: center;
+  width: 100vw;
+  height: 50vw;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

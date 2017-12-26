@@ -19,31 +19,45 @@ export default class Pedals extends Component{
 }
 
   render(){
-    let noResults = 'Sorry No Results';
+
     let filterPedals = products.filter((product) =>{
-      if(product !== []){
+
         return product.Brand.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
-    }else{
-      return noResults
-    }
+
     })
     console.log(products, 'this is products list');
-
-    let listProducts = filterPedals.map((product, i)=>{
+    let listProducts;
+    if (filterPedals.length > 1){
+    listProducts = filterPedals.map((product, i)=>{
       // console.log(product.Brand, 'this is Brand Name*************');
+
       return(
         <div className = 'each_pedal' key={i}>
           <h3 style={{textAlign: 'center'}}>{product.Brand}</h3>
         </div>
       )
     })
+
+  }else{
+
+      listProducts =
+      // <h3 style = {{textAlign: 'center' }}>Sorry No Results</h3>
+
+        <div className = 'no_results'>
+          <h3> Sorry No Results</h3>
+        </div>
+      
+      }
+
+
+
     return(
       <div className='pedals_box' >
         <div className = 'pedals_box_content'>
           <input className = 'search_box' onChange={this.updateSearch} value={this.state.search} placeholder = 'search by brand, model number, or pedal name' />
 
           {listProducts}
-          {noResults}
+
         </div>
       </div>
     )
