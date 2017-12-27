@@ -88,6 +88,14 @@
   width: 95vw;
   height: 2vw;
 }
+.search_box_brand{
+  margin-top: .5vw;
+  margin-left: 1vw;
+  font-size: 14pt;
+  text-align: center;
+  width: 95vw;
+  height: 2vw;
+}
 productName
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
