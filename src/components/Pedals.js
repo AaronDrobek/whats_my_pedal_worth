@@ -8,7 +8,7 @@ export default class Pedals extends Component{
     super(props);
     this.updateSearch=this.updateSearch.bind(this);
     this.state={
-      data: [],
+      products: {},
       search: '',
       pedals: []
     }
@@ -19,11 +19,13 @@ export default class Pedals extends Component{
 }
 
   render(){
-
+    // let filterPedals = this.state.products.filter((product)=>{
     let filterPedals = products.filter((product) =>{
             // console.log(product, 'product at the point of filter>>>>>>>>>>>>>>>>>>>');
-            // return product.Brand; product.productNAME;
+            // return product.productNAME
+        // console.log(product.productNAME, 'this is Product Name in filter>>>>>>>>>>>>>>>>>>>>>>>>');
         return product.Brand.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+              //  product.productID.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
         // return 'product';{
         //   'Brand';
         //   'productNAME';
@@ -31,6 +33,8 @@ export default class Pedals extends Component{
         // }
 
     })
+
+
 
     // console.log(products, 'this is products list');
     let listProducts;
@@ -42,8 +46,10 @@ export default class Pedals extends Component{
 
       return(
         <div className = 'each_pedal' key={i}>
-          <h3 style={{textAlign: 'center'}}>{product.Brand}</h3>
-          <h4 style={{textAlign: 'center'}}>{product.productNAME}</h4>
+          <h3 style={{textAlign: 'center', marginTop: 0}}>{product.Brand}</h3>
+          <h6 style={{textAlign: 'center'}}>{product.productNAME}</h6>
+          <h6 style={{textAlign: 'center'}}>{product.productID}</h6>
+
         </div>
       )
     })
