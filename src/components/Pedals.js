@@ -41,22 +41,22 @@ export default class Pedals extends Component{
 
     console.log(products, 'this is products list');
     let listProducts;
-    if (filterModel.length > 0){
-    listProducts = filterModel.map((model, j)=>{
+    if (filterBrand.length > 0){
+    listProducts = filterBrand.map((product, i)=>{
         return(
-          <div className = 'each_pedal' key={j}>
-            <h3 style={{textAlign: 'center', marginTop: 0}}>{model.Brand}</h3>
-            <h6 style={{textAlign: 'center'}}>{model.productNAME}</h6>
+          <div className = 'each_pedal' key={i}>
+            <h3 style={{textAlign: 'center', marginTop: 0}}>{product.Brand}</h3>
+            <h6 style={{textAlign: 'center'}}>{product.productNAME}</h6>
           </div>
         )
       })
-    }
-    if (filterBrand.length > 0){
-    listProducts = filterBrand.map((product, i)=>{
+    }else
+    if (filterModel.length > 0){
+    listProducts = filterModel.map((model, j)=>{
       return(
-        <div className = 'each_pedal' key={i}>
-          <h3 style={{textAlign: 'center', marginTop: 0}}>{product.Brand}</h3>
-          <h6 style={{textAlign: 'center'}}>{product.productNAME}</h6>
+        <div className = 'each_pedal' key={j}>
+          <h3 style={{textAlign: 'center', marginTop: 0}}>{model.Brand}</h3>
+          <h6 style={{textAlign: 'center'}}>{model.productNAME}</h6>
         </div>
       )
     })
@@ -74,7 +74,7 @@ export default class Pedals extends Component{
     return(
       <div className='pedals_box' >
         <div className = 'pedals_box_content'>
-          <input className = 'search_box' onChange={this.updateSearch} value={this.state.search} placeholder = 'search by brand' />
+          <input className = 'search_box' onChange={this.updateSearch} value={this.state.search} placeholder = 'search by brand or model' />
 
           {listProducts}
 
